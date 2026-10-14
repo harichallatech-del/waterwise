@@ -1,0 +1,1 @@
+import {Controller,Get,Query} from '@nestjs/common';@Controller('rainfall')export class RainfallController{@Get('monthly')monthly(@Query('city')city='Hyderabad'){const mm=[8,12,18,24,45,115,165,175,155,85,25,8];return{data:{city,source:'illustrative-sample-not-authoritative',months:mm.map((rainfallMm,i)=>({month:i+1,rainfallMm}))}}}}

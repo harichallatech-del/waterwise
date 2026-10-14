@@ -1,0 +1,16 @@
+services:
+  postgres:
+    image: postgis/postgis:16-3.4
+    environment:
+      POSTGRES_DB: waterwise
+      POSTGRES_USER: waterwise
+      POSTGRES_PASSWORD: waterwise_dev_only
+    ports: ["5432:5432"]
+    volumes: ["waterwise_pgdata:/var/lib/postgresql/data","./database/init:/docker-entrypoint-initdb.d:ro"]
+    healthcheck:
+      test: ["CMD-SHELL","pg_isready -U waterwise -d waterwise"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+volumes:
+  waterwise_pgdata:

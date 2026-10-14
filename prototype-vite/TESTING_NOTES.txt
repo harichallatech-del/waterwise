@@ -1,0 +1,8 @@
+// Suggested unit tests for the estimator (extract estimate() into src/lib/estimate.ts first).
+// 1) 1 m² × 1 mm rain equals 1 L before coefficient/losses.
+// 2) Setting collectionLoss to 100 yields zero rainwater.
+// 3) Turning off rain or greywater sets that source's contribution to zero.
+// 4) Doubling roof area doubles modeled annual rain yield.
+// 5) Doubling weekly laundry loads doubles modeled laundry volume.
+// 6) Combined potential equals included rain + included greywater.
+// 7) Demand offset is clamped to 100%.

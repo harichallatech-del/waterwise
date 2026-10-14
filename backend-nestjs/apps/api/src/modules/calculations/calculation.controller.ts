@@ -1,0 +1,1 @@
+import {Body,Controller,Post} from '@nestjs/common';import {CalculationDto} from './dto';import {CalculationService} from './calculation.service';@Controller('calculations')export class CalculationController{constructor(private readonly service:CalculationService){}@Post()calculate(@Body()dto:CalculationDto){return{data:this.service.calculate(dto)}}}

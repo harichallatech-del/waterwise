@@ -1,0 +1,2 @@
+export interface FindOptions<T>{where?:Partial<T>;orderBy?:keyof T;direction?:'ASC'|'DESC';take?:number;skip?:number}
+export interface Dao<T,C=Partial<T>,U=Partial<T>>{findById(id:string):Promise<T|null>;findMany(options?:FindOptions<T>):Promise<T[]>;create(input:C):Promise<T>;update(id:string,input:U):Promise<T>;delete(id:string):Promise<boolean>}

@@ -1,0 +1,8 @@
+{
+  "name": "waterwise-frontend-nextjs",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {"dev": "npm --prefix apps/web run dev", "build": "npm --prefix apps/web run build", "start": "npm --prefix apps/web run start", "lint": "npm --prefix apps/web run lint"},
+  "dependencies": {"next": "^15.0.0", "react": "^19.0.0", "react-dom": "^19.0.0"},
+  "devDependencies": {"typescript": "^5.6.0", "@types/node": "^22.0.0", "@types/react": "^18.3.0", "@types/react-dom": "^18.3.0"}
+}

@@ -1,0 +1,1 @@
+import {Module} from '@nestjs/common';import {RainfallController} from './rainfall.controller';@Module({controllers:[RainfallController]})export class RainfallModule{}
